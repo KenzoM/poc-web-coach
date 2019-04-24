@@ -5,9 +5,9 @@ html {
   height: 100%;
 }
 
-body {
-  // @include serif-font;
-}
+// body {
+//   // @include serif-font;
+// }
 
 hr {
   max-width: 50px;
@@ -27,14 +27,14 @@ a {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  // @include sans-serif-font;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   // @include sans-serif-font;
+// }
 
 .bg-primary {
   // background-color: $primary !important;

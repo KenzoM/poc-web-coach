@@ -12,6 +12,7 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
+const shell = require('gulp-shell');
 
 // Load package.json for banner
 const pkg = require('./package.json');
@@ -125,6 +126,10 @@ function watchFiles() {
 const vendor = gulp.series(clean, modules);
 const build = gulp.series(vendor, gulp.parallel(css, js));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+
+gulp.task('firebase', shell.task([
+  'firebase deploy'
+]))
 
 // Export tasks
 exports.css = css;
